@@ -30,6 +30,7 @@ export const getStaticProps = () => {
     props: {
       meetups: DUMMY_MEETUPS,
     },
+    revalidate: 10,
   };
 };
 
