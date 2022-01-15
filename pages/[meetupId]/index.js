@@ -12,6 +12,26 @@ const MeetupDetails = () => {
   );
 };
 
+export const getStaticPaths = async (context) => {
+  // describe the dyuamic segment values
+
+  return {
+    fallback: false,
+    paths: [
+      {
+        params: {
+          meetupId: "m1",
+        },
+      },
+      {
+        params: {
+          meetupId: "m2",
+        },
+      },
+    ],
+  };
+};
+
 export const getStaticProps = async (context) => {
   // fetch data for a single meetup
 
